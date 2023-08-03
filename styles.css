@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+  background: #121212;
+  color: #cac4c4;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 5rem;
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(250, 37, 245, 1) 0%,
+    rgba(91, 29, 184, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#questionBar{
+  position: absolute;
+  
+}
