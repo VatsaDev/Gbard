@@ -5,7 +5,11 @@ async function gquery(data) {
     'https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText?key=AIzaSyDucoz8cp-KDI5_LWXBzbepSc6MN1Ly-Iw';
 
   var textBody = JSON.stringify({
-    prompt: { text: document.getElementById('questionBar').value },
+    prompt: {
+      text: `put all code in nested pre code tags, ${
+        document.getElementById('questionBar').value
+      }`,
+    },
   });
 
   const response = await fetch(url, {
@@ -33,5 +37,6 @@ function query() {
 function render() {
   for (let i = 0; i < chatArray.length; i++) {
     document.getElementById('queries').innerHTML += chatArray[i];
+    hljs.highlightAll();
   }
 }

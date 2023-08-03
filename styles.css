@@ -3,7 +3,6 @@
 * {
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
-  background: #121212;
   color: #cac4c4;
 }
 
@@ -32,6 +31,7 @@ header {
   width: 100%;
   border: none;
   margin-bottom: 10px;
+  background-color: #121212;
 }
 
 #questionBar {
@@ -41,6 +41,7 @@ header {
   width: 90%;
   border: none;
   padding: 10px;
+  background-color: #121212;
 }
 
 #ansBtn {

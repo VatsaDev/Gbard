@@ -12,13 +12,23 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
   </head>
 
   <body>
     <header>
       <h1>Google Bard</h1>
     </header>
-    <main id="queries"></main>
+    <main id="queries">
+      <pre><code>var x+=10</code></pre>
+    </main>
     <input type="text" id="questionBar" placeholder="text" />
     <button id="ansBtn" onclick="query()">send</button>
     <script src="script.js"></script>
