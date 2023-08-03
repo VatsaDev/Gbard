@@ -17,12 +17,16 @@ async function gquery(data) {
   const gtext = await response.json();
 
   chatArray.push(gtext.candidates[0].output);
+  render()
 }
 
-function query() {
+function query(input) {
+  chatArray.push(input);
   gquery(input);
 }
 
 function render() {
-  chatArray.forEach();
+  for (let i = 0; i < chatArray.length; i++) {
+    document.getElementById('queries') += chatArray[i];
+  }
 }
