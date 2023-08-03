@@ -25,7 +25,9 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-#questionBar{
+#questionBar {
   position: absolute;
-  
+  top: 90vh;
+  height: 10vh;
+  width: 100vh;
 }
