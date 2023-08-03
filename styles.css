@@ -29,5 +29,17 @@ h1 {
   position: absolute;
   top: 90vh;
   height: 10vh;
-  width: 100%;
+  width: 90%;
+  border: none;
+  padding: 10px;
+}
+
+#ansBtn {
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  height: 10vh;
+  width: 10%;
+  background-color: #242424;
+  border: none;
 }
