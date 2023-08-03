@@ -1,3 +1,3 @@
 # Gbard
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/web-platform-ptvtah)
+simple way to talk to google bard

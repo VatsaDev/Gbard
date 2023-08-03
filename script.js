@@ -4,7 +4,9 @@ async function gquery(data) {
   const url =
     'https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText?key=AIzaSyDucoz8cp-KDI5_LWXBzbepSc6MN1Ly-Iw';
 
-  var textBody = '{ "prompt": { "text": "' + data + '"} }';
+  var textBody = JSON.stringify({
+    prompt: { text: document.getElementById('questionBar').value },
+  });
 
   const response = await fetch(url, {
     method: 'POST',
@@ -15,18 +17,19 @@ async function gquery(data) {
   });
 
   const gtext = await response.json();
-
-  chatArray.push(gtext.candidates[0].output);
-  render()
+  console.log(gtext.candidates[0].output);
+  chatArray.push(`<p>${gtext.candidates[0].output}</p>`);
+  render();
 }
 
-function query(input) {
-  chatArray.push(input);
-  gquery(input);
+function query() {
+  chatArray.push(`<p>${document.getElementById('questionBar').value}</p>`);
+  console.log(chatArray);
+  gquery();
 }
 
 function render() {
   for (let i = 0; i < chatArray.length; i++) {
-    document.getElementById('queries') += chatArray[i];
+    document.getElementById('queries').innerHTML += chatArray[i];
   }
 }
