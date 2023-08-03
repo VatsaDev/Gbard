@@ -19,11 +19,13 @@ async function gquery(data) {
   const gtext = await response.json();
   console.log(gtext.candidates[0].output);
   chatArray.push(`<p>${gtext.candidates[0].output}</p>`);
+  chatArray.push('output');
   render();
 }
 
 function query() {
   chatArray.push(`<p>${document.getElementById('questionBar').value}</p>`);
+  chatArray.push('input');
   console.log(chatArray);
   gquery();
 }
