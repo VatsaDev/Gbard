@@ -25,6 +25,15 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
+header {
+  position: absolute;
+  top: 0%;
+  height: 10%;
+  width: 100%;
+  border: none;
+  margin-bottom: 10px;
+}
+
 #questionBar {
   position: absolute;
   top: 90%;
@@ -40,6 +49,16 @@ h1 {
   left: 90%;
   height: 10%;
   width: 10%;
-  background-color: #242424;
+  background-color: #363636;
   border: none;
+}
+
+#queries {
+  background-color: #242424;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  height: 80%;
+  width: 100%;
+  padding: 10px;
 }
