@@ -1,5 +1,18 @@
 var chatArray = [];
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('service_worker.js')
+    .then((registration) => {
+      console.log('SW Registered!');
+    })
+    .catch((error) => {
+      console.log('SW Registration Failed');
+    });
+} else {
+  console.log('Not supported');
+}
+
 async function gquery(data) {
   const url =
     'https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText?key=AIzaSyDucoz8cp-KDI5_LWXBzbepSc6MN1Ly-Iw';
