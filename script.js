@@ -15,7 +15,7 @@ if ('serviceWorker' in navigator) {
 
 async function gquery(data) {
   const url =
-    'https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText?key=AIzaSyDucoz8cp-KDI5_LWXBzbepSc6MN1Ly-Iw';
+    'https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText?key={{ KEY HERE }}';
 
   var textBody = JSON.stringify({
     prompt: {
